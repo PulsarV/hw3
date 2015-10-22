@@ -1,0 +1,22 @@
+{
+    "name": "geekhub/hw3",
+    "description": "My homework #3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Volodymyr Kravchuk",
+            "email": "pulsarv@rambler.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bases\\": "src/Bases",
+            "Notebooks\\": "src/Notebooks",
+            "Pencils\\": "src/Pencils",
+            "Pens\\": "src/Pens",
+            "Rulers\\": "src/Rulers"
+	 }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
