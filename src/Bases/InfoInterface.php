@@ -6,9 +6,12 @@
  * Time: 13:28
  */
 
-namespace Pencils;
+namespace Bases;
 
-interface PencilsInterface
+interface InfoInterface
 {
+    /**
+     * @return mixed
+     */
     public function __toString();
 }

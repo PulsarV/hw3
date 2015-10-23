@@ -8,20 +8,35 @@
 
 namespace Pencils;
 
-use Bases\Stationery;
+use Bases\InfoInterface;
+use Bases\AbstractStationery;
+use Bases\PrintFormat;
 
-class ColorPencils extends Stationery implements PencilsInterface
+class ColorPencils extends AbstractStationery implements InfoInterface
 {
+    use PrintFormat;
+
+    /**
+     * @param $quantity
+     */
     public function setQuantityInBox($quantity)
     {
         $this->quantityInBox = $quantity;
     }
-    public function __toString(){
-        $info = "<p>Color pencils \"" . $this->brandName . "\":</p>\n";
-        $info .= "Quantity in box: " . $this->quantityInBox . "<br>\n";
-        $info .= "Price: " . $this->price . "$<br>\n";
-        $info .= "Quantity in stock: " . $this->quantityInStock . "<br>\n";
-        return $info;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        $textArr = Array (
+            'Pensils'=>'brandName',
+            'Price'=>'price',
+            'Quantity in box'=>'quantityInBox',
+            'Quantity in stock'=>'quantityInStock'
+        );
+        return $this->formatText($textArr);
     }
-    protected $quantityInBox;
+
+    protected $quantityInBox = 0;
 }

@@ -3,18 +3,34 @@
  * Created by PhpStorm.
  * User: Volodymyr Kravchuk
  * Date: 23.10.15
- * Time: 0:13
+ * Time: 18:16
  */
 
-namespace Pencils;
+namespace Rulers;
 
 use Bases\InfoInterface;
 use Bases\AbstractStationery;
 use Bases\PrintFormat;
 
-class Pencil extends AbstractStationery implements InfoInterface
+class Ruler extends AbstractStationery implements InfoInterface
 {
     use PrintFormat;
+
+    /**
+     * @param $length
+     */
+    public function setLength($length)
+    {
+        $this->length = $length;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
 
     /**
      * @return string
@@ -22,10 +38,13 @@ class Pencil extends AbstractStationery implements InfoInterface
     public function __toString()
     {
         $textArr = Array (
-            'Pensil'=>'brandName',
+            'Ruler'=>'brandName',
+            'Length'=>'length',
             'Price'=>'price',
             'Quantity in stock'=>'quantityInStock'
         );
         return $this->formatText($textArr);
     }
+
+    private $length = 0;
 }

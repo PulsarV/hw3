@@ -8,24 +8,36 @@
 
 require_once 'vendor/autoload.php';
 
-//use Notebooks\Notebook;
+use Copybooks\Copybook;
 use Pencils\Pencil;
 use Pencils\ColorPencils;
-use Pensils\PensilsInterface;
-//use Pens\Pen;
-//use Rulers\Ruler;
+use Rulers\Ruler;
 
-$newPencil = new Pencil();
-$newPencil->setBrand('NoName');
-$newPencil->setPrice(1);
-$newPencil->addToStock(1500);
+$greyPencil = new Pencil();
+$greyPencil->setBrand('China');
+$greyPencil->setPrice(1);
+$greyPencil->addToStock(1500);
 
-echo $newPencil;
+$ColPencils = new ColorPencils();
+$ColPencils->setBrand('GoodCompany');
+$ColPencils->setquantityInBox(12);
+$ColPencils->setPrice(8);
+$ColPencils->addToStock(500);
 
-$newColorPencils = new ColorPencils();
-$newColorPencils->setBrand('NoName1');
-$newColorPencils->setquantityInBox(12);
-$newColorPencils->setPrice(8);
-$newColorPencils->addToStock(500);
+$bigCopybook = new Copybook();
+$bigCopybook->setBrand('Kyiv');
+$bigCopybook->setPatternType('line');
+$bigCopybook->setPagesQuantity(96);
+$bigCopybook->setPrice(10);
+$bigCopybook->addToStock(100);
 
-echo $newColorPencils;
+$simpleRuler = new Ruler();
+$simpleRuler->setBrand('Minsk');
+$simpleRuler->setLength(30);
+$simpleRuler->setPrice(2);
+$simpleRuler->addToStock(80);
+
+echo $greyPencil;
+echo $ColPencils;
+echo $bigCopybook;
+echo $simpleRuler;

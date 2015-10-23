@@ -11,9 +11,8 @@
     "autoload": {
         "psr-4": {
             "Bases\\": "src/Bases",
-            "Notebooks\\": "src/Notebooks",
+            "Copybooks\\": "src/Copybooks",
             "Pencils\\": "src/Pencils",
-            "Pens\\": "src/Pens",
             "Rulers\\": "src/Rulers"
 	 }
     },
