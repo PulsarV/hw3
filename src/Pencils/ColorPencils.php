@@ -9,9 +9,8 @@
 namespace Pencils;
 
 use Bases\Stationery;
-use Pensils\PensilsInterface;
 
-class ColorPencils extends Stationery implements PensilsInterface
+class ColorPencils extends Stationery implements PencilsInterface
 {
     public function setQuantityInBox($quantity)
     {

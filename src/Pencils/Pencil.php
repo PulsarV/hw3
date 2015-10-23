@@ -9,9 +9,8 @@
 namespace Pencils;
 
 use Bases\Stationery;
-use Pensils\PensilsInterface;
 
-class Pencil extends Stationery implements PensilsInterface
+class Pencil extends Stationery implements PencilsInterface
 {
     public function __toString(){
         $info = "<p>Pencil \"" . $this->brandName . "\":</p>\n";

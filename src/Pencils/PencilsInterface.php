@@ -6,9 +6,9 @@
  * Time: 13:28
  */
 
-namespace Pensils;
+namespace Pencils;
 
-interface PensilsInterface
+interface PencilsInterface
 {
     public function __toString();
 }
