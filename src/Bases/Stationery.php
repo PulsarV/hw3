@@ -26,20 +26,20 @@ abstract class Stationery
     {
         return $this->price;
     }
-    public function getCount()
+    public function getQuantity()
     {
         return $this->countInStock;
     }
-    public function addToStock($count)
+    public function addToStock($quantity)
     {
-        $this->countInStock += $count;
+        $this->quantityInStock += $quantity;
     }
-    public function getFromStock($count)
+    public function getFromStock($quantity)
     {
-        $this->countInStock -= $count;
+        $this->quantityInStock -= $quantity;
     }
     protected $brandName = '';
     protected $price = 0;
-    protected $countInStock = 0;
+    protected $quantityInStock = 0;
 
 }

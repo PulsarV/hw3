@@ -10,7 +10,8 @@ require_once 'vendor/autoload.php';
 
 //use Notebooks\Notebook;
 use Pencils\Pencil;
-use Pencils\ColorPencil;
+use Pencils\ColorPencils;
+use Pensils\PensilsInterface;
 //use Pens\Pen;
 //use Rulers\Ruler;
 
@@ -21,10 +22,10 @@ $newPencil->addToStock(1500);
 
 echo $newPencil;
 
-$newColorPencil = new ColorPencil();
-$newColorPencil->setBrand('NoName1');
-$newColorPencil->setColor('Red');
-$newColorPencil->setPrice(3);
-$newColorPencil->addToStock(1500);
+$newColorPencils = new ColorPencils();
+$newColorPencils->setBrand('NoName1');
+$newColorPencils->setquantityInBox(12);
+$newColorPencils->setPrice(8);
+$newColorPencils->addToStock(500);
 
-echo $newColorPencil;
+echo $newColorPencils;
